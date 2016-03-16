@@ -15,8 +15,8 @@ var colors = Array(SWATCH_COUNT);
 randomizeSwatches();
 
 var answerColorIndex = getRandomIntWithMax(SWATCH_COUNT - 1);
-var answerColorRGB = colors[answerColorIndex];
-answerDisplaySpan.innerHTML = answerColorRGB.toUpperCase();
+var correctAnswerString = colors[answerColorIndex];
+answerDisplaySpan.innerHTML = correctAnswerString.toUpperCase();
 
 // EVENTS
 
@@ -47,8 +47,8 @@ function randomizeSwatches() {
 
 function isSwatchCorrect(chosenSwatch) {
   var swatchColor = chosenSwatch.style.backgroundColor;
-  console.log(swatchColor, answerColorRGB);
-  return swatchColor === answerColorRGB;
+  console.log(swatchColor, correctAnswerString);
+  return swatchColor === correctAnswerString;
 }
 
 function getRandomColorString() {
