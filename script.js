@@ -13,12 +13,6 @@ var answerDisplaySpan = document.querySelector(".answer-rgb-display");
 var colors = Array(SWATCH_COUNT);
 var correctAnswerString = "";
 
-function generateCorrectAnswer() {
-  var stringsLastIndex = colors.length - 1;
-  var answerIndex = getRandomIntWithMax(stringsLastIndex);
-  return colors[answerIndex];
-}
-
 // EVENTS
 
 for (var i = 0; i < swatches.length; i++) {
@@ -50,6 +44,12 @@ function randomizeSwatches() {
     colors[i] = swatchColor;
     swatches[i].style.backgroundColor = swatchColor;
   }
+}
+
+function generateCorrectAnswer() {
+  var stringsLastIndex = colors.length - 1;
+  var answerIndex = getRandomIntWithMax(stringsLastIndex);
+  return colors[answerIndex];
 }
 
 function isSwatchCorrect(chosenSwatch) {
