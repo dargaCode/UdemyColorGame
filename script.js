@@ -1,5 +1,5 @@
 var swatches = document.querySelectorAll(".swatch");
-var pickedColorSpan = document.querySelector(".answer-rgb-display");
+var answerDisplaySpan = document.querySelector(".answer-rgb-display");
 
 var colors = [
   "rgb(255, 0, 0)",
@@ -16,4 +16,4 @@ for (var i = 0; i < swatches.length; i++) {
   swatches[i].style.backgroundColor = colors[i];
 }
 
-pickedColorSpan.innerHTML = pickedColorRGB.toUpperCase();
+answerDisplaySpan.innerHTML = pickedColorRGB.toUpperCase();
