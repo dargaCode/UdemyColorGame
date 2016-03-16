@@ -17,3 +17,10 @@ for (var i = 0; i < swatches.length; i++) {
 }
 
 answerDisplaySpan.innerHTML = answerColorRGB.toUpperCase();
+
+for (var i = 0; i < swatches.length; i++) {
+  swatches[i].addEventListener("click", swatchClicked);
+}
+
+function swatchClicked() {
+}
