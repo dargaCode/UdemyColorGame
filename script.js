@@ -44,3 +44,9 @@ function getRandomIntWithMax(maxRandom) {
   var result = Math.random() * maxRandom;
   return Math.round(result);
 }
+
+function colorAllSwatches(color) {
+  for (var i = 0; i < swatches.length; i++) {
+    swatches[i].style.backgroundColor = color;
+  }
+}
