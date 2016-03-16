@@ -11,12 +11,11 @@ var colors = [
 ]
 
 var answerColorRGB = colors[3];
+answerDisplaySpan.innerHTML = answerColorRGB.toUpperCase();
 
 for (var i = 0; i < swatches.length; i++) {
   swatches[i].style.backgroundColor = colors[i];
 }
-
-answerDisplaySpan.innerHTML = answerColorRGB.toUpperCase();
 
 for (var i = 0; i < swatches.length; i++) {
   swatches[i].addEventListener("click", swatchClicked);
