@@ -1,3 +1,5 @@
+var SWATCH_COUNT = 6;
+
 var swatches = document.querySelectorAll(".swatch");
 var answerDisplaySpan = document.querySelector(".answer-rgb-display");
 
@@ -10,7 +12,7 @@ var colors = [
   "rgb(0, 0, 255)"
 ]
 
-var answerColorIndex = getRandomIntWithMax(colors.length - 1);
+var answerColorIndex = getRandomIntWithMax(SWATCH_COUNT - 1);
 var answerColorRGB = colors[answerColorIndex];
 answerDisplaySpan.innerHTML = answerColorRGB.toUpperCase();
 
