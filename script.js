@@ -10,10 +10,10 @@ var colors = [
   "rgb(0, 0, 255)"
 ]
 
-pickedColorRGB = colors[3];
+answerColorRGB = colors[3];
 
 for (var i = 0; i < swatches.length; i++) {
   swatches[i].style.backgroundColor = colors[i];
 }
 
-answerDisplaySpan.innerHTML = pickedColorRGB.toUpperCase();
+answerDisplaySpan.innerHTML = answerColorRGB.toUpperCase();
