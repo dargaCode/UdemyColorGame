@@ -16,7 +16,6 @@ for (var i = 0; i < colors.length; i++) {
   var swatchColor = getRandomColorString();
   colors[i] = swatchColor;
   swatches[i].style.backgroundColor = swatchColor;
-  swatches[i].addEventListener("click", swatchGuessed);
 }
 
 var answerColorIndex = getRandomIntWithMax(SWATCH_COUNT - 1);
@@ -24,6 +23,10 @@ var answerColorRGB = colors[answerColorIndex];
 answerDisplaySpan.innerHTML = answerColorRGB.toUpperCase();
 
 // EVENTS
+
+for (var i = 0; i < swatches.length; i++) {
+  swatches[i].addEventListener("click", swatchGuessed);
+}
 
 function swatchGuessed() {
   if (isSwatchCorrect(this)) {
