@@ -10,7 +10,7 @@ var colors = [
   "rgb(0, 0, 255)"
 ]
 
-answerColorRGB = colors[3];
+var answerColorRGB = colors[3];
 
 for (var i = 0; i < swatches.length; i++) {
   swatches[i].style.backgroundColor = colors[i];
