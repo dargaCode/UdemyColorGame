@@ -1,0 +1,25 @@
+body {
+  background-color: #232323;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  font-size: 0; /* no space between inline-block elements*/
+  margin: 0 auto;
+}
+
+h1 {
+  color: white;
+}
+
+.swatch {
+  display: inline-block;
+  padding-bottom: 30%; /*in lieu of height*/
+  width: 30%;
+  background-color: purple;
+  margin: 1.66%;
+}
