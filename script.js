@@ -12,11 +12,7 @@ var answerDisplaySpan = document.querySelector(".answer-rgb-display");
 
 var colors = Array(SWATCH_COUNT);
 
-for (var i = 0; i < colors.length; i++) {
-  var swatchColor = getRandomColorString();
-  colors[i] = swatchColor;
-  swatches[i].style.backgroundColor = swatchColor;
-}
+randomizeSwatches();
 
 var answerColorIndex = getRandomIntWithMax(SWATCH_COUNT - 1);
 var answerColorRGB = colors[answerColorIndex];
@@ -40,6 +36,14 @@ function swatchGuessed() {
 }
 
 // LOGIC
+
+function randomizeSwatches() {
+  for (var i = 0; i < colors.length; i++) {
+    var swatchColor = getRandomColorString();
+    colors[i] = swatchColor;
+    swatches[i].style.backgroundColor = swatchColor;
+  }
+}
 
 function isSwatchCorrect(chosenSwatch) {
   var swatchColor = chosenSwatch.style.backgroundColor;
