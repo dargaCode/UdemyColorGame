@@ -35,3 +35,8 @@ function isSwatchCorrect(chosenSwatch) {
   console.log(swatchColor, answerColorRGB);
   return swatchColor === answerColorRGB;
 }
+
+function getRandomIntWithMax(maxRandom) {
+  var result = Math.random() * maxRandom;
+  return Math.round(result);
+}
