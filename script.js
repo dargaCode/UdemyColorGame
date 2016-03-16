@@ -22,4 +22,16 @@ for (var i = 0; i < swatches.length; i++) {
 }
 
 function swatchClicked() {
+  if (isSwatchCorrect(this)) {
+    console.log("correct!");
+  }
+  else {
+    console.log("incorrect!");
+  }
+}
+
+function isSwatchCorrect(chosenSwatch) {
+  var swatchColor = chosenSwatch.style.backgroundColor;
+  console.log(swatchColor, answerColorRGB);
+  return swatchColor === answerColorRGB;
 }
