@@ -14,8 +14,14 @@ var colors = Array(SWATCH_COUNT);
 
 randomizeSwatches();
 
-var answerColorIndex = getRandomIntWithMax(SWATCH_COUNT - 1);
-var correctAnswerString = colors[answerColorIndex];
+var correctAnswerString = generateCorrectAnswer();
+
+function generateCorrectAnswer() {
+  var stringsLastIndex = colors.length - 1;
+  var answerIndex = getRandomIntWithMax(stringsLastIndex);
+  return colors[answerIndex];
+}
+
 answerDisplaySpan.innerHTML = correctAnswerString.toUpperCase();
 
 // EVENTS
