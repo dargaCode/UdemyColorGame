@@ -28,6 +28,7 @@ answerDisplaySpan.innerHTML = answerColorRGB.toUpperCase();
 function swatchGuessed() {
   if (isSwatchCorrect(this)) {
     console.log("correct!");
+    colorAllSwatches(this.style.backgroundColor);
   }
   else {
     console.log("incorrect!");
