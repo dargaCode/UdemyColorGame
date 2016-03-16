@@ -1,8 +1,14 @@
+// CONSTANTS
+
 var SWATCH_COUNT = 6;
 var BODY_COLOR = "#232323";
 
+// SELECTORS
+
 var swatches = document.querySelectorAll(".swatch");
 var answerDisplaySpan = document.querySelector(".answer-rgb-display");
+
+// VARIABLES
 
 var colors = Array(SWATCH_COUNT);
 
@@ -17,6 +23,8 @@ var answerColorIndex = getRandomIntWithMax(SWATCH_COUNT - 1);
 var answerColorRGB = colors[answerColorIndex];
 answerDisplaySpan.innerHTML = answerColorRGB.toUpperCase();
 
+// EVENTS
+
 function swatchClicked() {
   if (isSwatchCorrect(this)) {
     console.log("correct!");
@@ -26,6 +34,8 @@ function swatchClicked() {
     this.style.backgroundColor = BODY_COLOR;
   }
 }
+
+// LOGIC
 
 function isSwatchCorrect(chosenSwatch) {
   var swatchColor = chosenSwatch.style.backgroundColor;
@@ -50,3 +60,5 @@ function colorAllSwatches(color) {
     swatches[i].style.backgroundColor = color;
   }
 }
+
+// MAIN
