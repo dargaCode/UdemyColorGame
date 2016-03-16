@@ -2,12 +2,12 @@ var swatches = document.querySelectorAll(".swatch");
 var pickedColorSpan = document.querySelector(".picked-color");
 
 var colors = [
-  "rgb(255, 000, 000)",
-  "rgb(255, 255, 000)",
-  "rgb(255, 000, 255)",
-  "rgb(000, 255, 000)",
-  "rgb(000, 255, 255)",
-  "rgb(000, 000, 255)"
+  "rgb(255, 0, 0)",
+  "rgb(255, 255, 0)",
+  "rgb(255, 0, 255)",
+  "rgb(0, 255, 0)",
+  "rgb(0, 255, 255)",
+  "rgb(0, 0, 255)"
 ]
 
 pickedColorRGB = colors[3];
