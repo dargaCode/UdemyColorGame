@@ -6,20 +6,15 @@ var answerDisplaySpan = document.querySelector(".answer-rgb-display");
 var colors = Array(SWATCH_COUNT);
 
 for (var i = 0; i < colors.length; i++) {
-  colors[i] = getRandomColorString();
+  var swatchColor = getRandomColorString();
+  colors[i] = swatchColor;
+  swatches[i].style.backgroundColor = swatchColor;
+  swatches[i].addEventListener("click", swatchClicked);
 }
 
 var answerColorIndex = getRandomIntWithMax(SWATCH_COUNT - 1);
 var answerColorRGB = colors[answerColorIndex];
 answerDisplaySpan.innerHTML = answerColorRGB.toUpperCase();
-
-for (var i = 0; i < swatches.length; i++) {
-  swatches[i].style.backgroundColor = colors[i];
-}
-
-for (var i = 0; i < swatches.length; i++) {
-  swatches[i].addEventListener("click", swatchClicked);
-}
 
 function swatchClicked() {
   if (isSwatchCorrect(this)) {
