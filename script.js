@@ -1,5 +1,5 @@
 var swatches = document.querySelectorAll(".swatch");
-var pickedColorSpan = document.querySelector(".picked-color");
+var pickedColorSpan = document.querySelector(".answer-rgb-display");
 
 var colors = [
   "rgb(255, 0, 0)",
