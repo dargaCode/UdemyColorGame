@@ -11,18 +11,13 @@ var answerDisplaySpan = document.querySelector(".answer-rgb-display");
 // VARIABLES
 
 var colors = Array(SWATCH_COUNT);
-
-randomizeSwatches();
-
-var correctAnswerString = generateCorrectAnswer();
+var correctAnswerString = "";
 
 function generateCorrectAnswer() {
   var stringsLastIndex = colors.length - 1;
   var answerIndex = getRandomIntWithMax(stringsLastIndex);
   return colors[answerIndex];
 }
-
-answerDisplaySpan.innerHTML = correctAnswerString.toUpperCase();
 
 // EVENTS
 
@@ -42,6 +37,12 @@ function swatchGuessed() {
 }
 
 // LOGIC
+
+function resetGame() {
+  randomizeSwatches();
+  correctAnswerString = generateCorrectAnswer();
+  answerDisplaySpan.innerHTML = correctAnswerString.toUpperCase();
+}
 
 function randomizeSwatches() {
   for (var i = 0; i < colors.length; i++) {
@@ -76,3 +77,5 @@ function colorAllSwatches(color) {
 }
 
 // MAIN
+
+resetGame();
