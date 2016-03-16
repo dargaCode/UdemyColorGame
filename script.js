@@ -10,7 +10,8 @@ var colors = [
   "rgb(0, 0, 255)"
 ]
 
-var answerColorRGB = colors[3];
+var answerColorIndex = getRandomIntWithMax(colors.length - 1);
+var answerColorRGB = colors[answerColorIndex];
 answerDisplaySpan.innerHTML = answerColorRGB.toUpperCase();
 
 for (var i = 0; i < swatches.length; i++) {
