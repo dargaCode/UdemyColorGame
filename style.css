@@ -1,4 +1,5 @@
 body {
+  color: white;
   background-color: #232323;
   box-sizing: border-box;
   text-align: center;
@@ -10,10 +11,6 @@ body {
   max-width: 600px;
   font-size: 0; /* no space between inline-block elements*/
   margin: 0 auto;
-}
-
-h1 {
-  color: white;
 }
 
 .swatch {
