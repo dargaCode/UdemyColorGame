@@ -36,6 +36,13 @@ function isSwatchCorrect(chosenSwatch) {
   return swatchColor === answerColorRGB;
 }
 
+function getRandomColorString() {
+  var red = getRandomIntWithMax(255);
+  var green = getRandomIntWithMax(255);
+  var blue = getRandomIntWithMax(255);
+  return "rgb(" + red + ", " + green + ", " + blue + ")";
+}
+
 function getRandomIntWithMax(maxRandom) {
   var result = Math.random() * maxRandom;
   return Math.round(result);
