@@ -1,3 +1,5 @@
+var swatches = document.querySelectorAll(".swatch");
+
 var colors = [
   "rgb(255,000,000)",
   "rgb(255,255,000)",
@@ -7,7 +9,6 @@ var colors = [
   "rgb(000,000,255)"
 ]
 
-var swatches = document.querySelectorAll(".swatch");
 
 for (var i = 0; i < swatches.length; i++) {
   swatches[i].style.backgroundColor = colors[i];
