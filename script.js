@@ -1,4 +1,5 @@
 var SWATCH_COUNT = 6;
+var BODY_COLOR = "#232323";
 
 var swatches = document.querySelectorAll(".swatch");
 var answerDisplaySpan = document.querySelector(".answer-rgb-display");
@@ -22,6 +23,7 @@ function swatchClicked() {
   }
   else {
     console.log("incorrect!");
+    this.style.backgroundColor = BODY_COLOR;
   }
 }
 
