@@ -3,14 +3,11 @@ var SWATCH_COUNT = 6;
 var swatches = document.querySelectorAll(".swatch");
 var answerDisplaySpan = document.querySelector(".answer-rgb-display");
 
-var colors = [
-  "rgb(255, 0, 0)",
-  "rgb(255, 255, 0)",
-  "rgb(255, 0, 255)",
-  "rgb(0, 255, 0)",
-  "rgb(0, 255, 255)",
-  "rgb(0, 0, 255)"
-]
+var colors = Array(SWATCH_COUNT);
+
+for (var i = 0; i < colors.length; i++) {
+  colors[i] = getRandomColorString();
+}
 
 var answerColorIndex = getRandomIntWithMax(SWATCH_COUNT - 1);
 var answerColorRGB = colors[answerColorIndex];
