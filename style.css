@@ -39,6 +39,12 @@ body {
   display: inline-block;
 }
 
+.header button {
+  height: 50px;
+  border: none;
+  padding: 0 20px;
+}
+
 /*JUMBOTRON*/
 
 .jumbotron .banner {
