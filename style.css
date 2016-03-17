@@ -70,7 +70,7 @@ body {
 .jumbotron .banner {
   min-height: calc(600px * 0.3);
   background-color: red;
-  margin-top: 3.33%;
+  margin-top: 3.33%; /*Same top margin as swatches*/
   padding: 20px;
 }
 
