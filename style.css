@@ -23,6 +23,10 @@ body {
   padding: 20px;
 }
 
+.gallery {
+  padding-bottom: 40px;
+}
+
 .swatch {
   display: inline-block;
   padding-bottom: 30%; /*in lieu of height*/
