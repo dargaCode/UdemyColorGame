@@ -19,6 +19,10 @@ body {
 
 /*HEADER*/
 
+.header {
+  background-color: white;
+}
+
 .header .row #reset-btn {
   float: left;
 }
