@@ -17,14 +17,20 @@ body {
   margin: 0 auto;
 }
 
+/*COMMON*/
+
+.header .container .row,
+.jumbotron .container .banner {
+  /*Matching margins within container
+  to align vertically with swatch grid*/
+  margin-left: 1.66%;
+  margin-right: 1.66%;
+}
+
 /*HEADER*/
 
 .header {
   background-color: white;
-}
-
-.header .row {
-  margin: 0 1.66%;
 }
 
 .header .row #reset-btn {
@@ -64,7 +70,7 @@ body {
 .jumbotron .banner {
   min-height: calc(600px * 0.3);
   background-color: red;
-  margin: 3.33% 1.66% 0;
+  margin-top: 3.33%;
   padding: 20px;
 }
 
