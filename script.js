@@ -13,7 +13,7 @@ var swatches = document.querySelectorAll(".gallery .swatch");
 // VARIABLES
 
 var colors = Array(SWATCH_COUNT);
-var correctAnswerString = "";
+var correctAnswerRGB = "";
 
 // EVENTS
 
@@ -24,8 +24,8 @@ for (var i = 0; i < swatches.length; i++) {
 function swatchGuessed() {
   if (isSwatchCorrect(this)) {
     console.log("correct!");
-    mainBanner.style.backgroundColor = correctAnswerString;
-    colorAllSwatches(correctAnswerString);
+    mainBanner.style.backgroundColor = correctAnswerRGB;
+    colorAllSwatches(correctAnswerRGB);
   }
   else {
     console.log("incorrect!");
@@ -37,8 +37,8 @@ function swatchGuessed() {
 
 function resetGame() {
   randomizeSwatches();
-  correctAnswerString = generateCorrectAnswer();
-  answerDisplaySpan.innerHTML = correctAnswerString.toUpperCase();
+  correctAnswerRGB = generateCorrectAnswer();
+  answerDisplaySpan.innerHTML = correctAnswerRGB.toUpperCase();
 }
 
 function randomizeSwatches() {
@@ -57,8 +57,8 @@ function generateCorrectAnswer() {
 
 function isSwatchCorrect(chosenSwatch) {
   var swatchColor = chosenSwatch.style.backgroundColor;
-  console.log(swatchColor, correctAnswerString);
-  return swatchColor === correctAnswerString;
+  console.log(swatchColor, correctAnswerRGB);
+  return swatchColor === correctAnswerRGB;
 }
 
 function getRandomColorString() {
