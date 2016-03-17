@@ -18,7 +18,7 @@ body {
 .main .container .banner {
   min-height: calc(600px * 0.3);
   background-color: red;
-  margin: 0 1.66%;
+  margin: 3.33% 1.66% 0;
   padding: 20px;
 }
 
