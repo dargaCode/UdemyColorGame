@@ -19,6 +19,20 @@ body {
 
 /*HEADER*/
 
+.header .row #reset-btn {
+  float: left;
+}
+
+.header .row .menu {
+  float: right;
+}
+
+.header .row:after { /*clearfix*/
+  content: "";
+  display: block;
+  clear: both;
+}
+
 /*JUMBOTRON*/
 
 .jumbotron .banner {
