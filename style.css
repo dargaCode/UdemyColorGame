@@ -1,10 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   color: white;
   background-color: #232323;
-  box-sizing: border-box;
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 
 .container {
