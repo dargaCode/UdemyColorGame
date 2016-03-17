@@ -19,9 +19,9 @@ body {
 
 /*HEADER*/
 
-/*MAIN*/
+/*JUMBOTRON*/
 
-.main .container .banner {
+.jumbotron .container .banner {
   min-height: calc(600px * 0.3);
   background-color: red;
   margin: 3.33% 1.66% 0;
