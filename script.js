@@ -5,6 +5,10 @@ var BODY_COLOR = "#232323";
 
 // SELECTORS
 
+var resetButton = document.querySelector("#reset-btn");
+var easyButton = document.querySelector("#easy-btn");
+var hardButton = document.querySelector("#hard-btn");
+
 var mainBanner = document.querySelector(".jumbotron .banner");
 var answerDisplaySpan = document.querySelector("#answer-rgb-display");
 var swatches = document.querySelectorAll(".gallery .swatch");
