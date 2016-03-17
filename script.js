@@ -13,7 +13,6 @@ var mainBanner = document.querySelector(".jumbotron .banner");
 var answerDisplaySpan = document.querySelector("#answer-rgb-display");
 var swatches = document.querySelectorAll(".gallery .swatch");
 
-
 // VARIABLES
 
 var colors = Array(SWATCH_COUNT);
