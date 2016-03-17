@@ -16,6 +16,13 @@ body {
   margin: 0 auto;
 }
 
+.main .container .banner {
+  min-height: calc(600px * 0.3);
+  background-color: red;
+  margin: 0 1.66%;
+  padding: 20px;
+}
+
 .swatch {
   display: inline-block;
   padding-bottom: 30%; /*in lieu of height*/
