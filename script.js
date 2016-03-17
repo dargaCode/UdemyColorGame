@@ -5,6 +5,7 @@ var BODY_COLOR = "#232323";
 
 // SELECTORS
 
+var mainBanner = document.querySelector(".main .banner");
 var answerDisplaySpan = document.querySelector(".main .answer-rgb-display");
 var swatches = document.querySelectorAll(".gallery .swatch");
 
