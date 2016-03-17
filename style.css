@@ -27,7 +27,7 @@ body {
   font-size: 0; /* no space between inline-block elements*/
 }
 
-.swatch {
+.gallery .swatch {
   display: inline-block;
   padding-bottom: 30%; /*in lieu of height*/
   width: 30%;
