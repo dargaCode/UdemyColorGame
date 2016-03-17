@@ -23,6 +23,10 @@ body {
   background-color: white;
 }
 
+.header .row {
+  margin: 0 1.66%;
+}
+
 .header .row #reset-btn {
   float: left;
 }
