@@ -25,12 +25,18 @@ body {
 
 .header .row .menu {
   float: right;
+  list-style: none;
+  font-size: 0; /* no space between inline-block elements*/
 }
 
 .header .row:after { /*clearfix*/
   content: "";
   display: block;
   clear: both;
+}
+
+.header .row .menu li {
+  display: inline-block;
 }
 
 /*JUMBOTRON*/
