@@ -24,8 +24,8 @@ for (var i = 0; i < swatches.length; i++) {
 function swatchGuessed() {
   if (isSwatchCorrect(this)) {
     console.log("correct!");
-    mainBanner.style.backgroundColor = this.style.backgroundColor;
-    colorAllSwatches(this.style.backgroundColor);
+    mainBanner.style.backgroundColor = correctAnswerString;
+    colorAllSwatches(correctAnswerString);
   }
   else {
     console.log("incorrect!");
