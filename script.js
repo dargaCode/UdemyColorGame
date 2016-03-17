@@ -21,9 +21,19 @@ var correctAnswerRGB = "";
 // EVENTS
 
 resetButton.addEventListener("click", resetGame);
+easyButton.addEventListener("click", setDifficultyEasy);
+hardButton.addEventListener("click", setDifficultyHard);
 
 for (var i = 0; i < swatches.length; i++) {
   swatches[i].addEventListener("click", swatchGuessed);
+}
+
+function setDifficultyEasy() {
+  alert("Clicked Easy!");
+}
+
+function setDifficultyHard() {
+  alert("Clicked Hard!");
 }
 
 function swatchGuessed() {
