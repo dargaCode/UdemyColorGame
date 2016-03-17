@@ -20,6 +20,8 @@ var correctAnswerRGB = "";
 
 // EVENTS
 
+resetButton.addEventListener("click", resetGame);
+
 for (var i = 0; i < swatches.length; i++) {
   swatches[i].addEventListener("click", swatchGuessed);
 }
