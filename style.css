@@ -44,9 +44,15 @@ body {
 }
 
 .header button {
+  background-color: white;
   height: 50px;
   border: none;
   padding: 0 20px;
+}
+
+.header button:hover {
+  color: white;
+  background-color: black;
 }
 
 /*JUMBOTRON*/
