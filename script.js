@@ -1,6 +1,7 @@
 // CONSTANTS
 
-var SWATCH_COUNT = 6;
+var SWATCH_COUNT_EASY = 3;
+var SWATCH_COUNT_HARD = 6;
 var BODY_COLOR = "#333333";
 var BANNER_COLOR = "#666666";
 
@@ -17,7 +18,8 @@ var swatches = document.querySelectorAll(".gallery .swatch");
 
 // VARIABLES
 
-var colors = Array(SWATCH_COUNT);
+var swatchCount = SWATCH_COUNT_HARD;
+var colors = Array(swatchCount);
 var correctAnswerRGB = "";
 var gameOver = false;
 
