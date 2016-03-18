@@ -18,8 +18,8 @@ var swatches = document.querySelectorAll(".gallery .swatch");
 
 // VARIABLES
 
-var swatchCount = SWATCH_COUNT_HARD;
-var colors = Array(swatchCount);
+var difficultySwatchCount = SWATCH_COUNT_HARD;
+var colors = Array(difficultySwatchCount);
 var correctAnswerRGB = "";
 var gameOver = false;
 
@@ -38,14 +38,14 @@ for (var i = 0; i < swatches.length; i++) {
 
 function setDifficultyEasy() {
   setActiveDifficultyButton(this);
-  swatchCount = SWATCH_COUNT_EASY;
+  difficultySwatchCount = SWATCH_COUNT_EASY;
   resetGame();
 }
 
 function setDifficultyHard() {
   setActiveDifficultyButton(this);
-  swatchCount = SWATCH_COUNT_HARD;
-  resetGame();
+  difficultySwatchCount = SWATCH_COUNT_HARD;
+  resetGame()
 }
 
 function swatchClicked() {
@@ -65,8 +65,8 @@ function swatchClicked() {
 function resetGame() {
   gameOver = false;
   jumbotronBanner.style.backgroundColor = BANNER_COLOR;
-  randomizeSwatches(swatchCount);
-  correctAnswerRGB = generateCorrectAnswer(swatchCount);
+  randomizeSwatches(difficultySwatchCount);
+  correctAnswerRGB = generateCorrectAnswer(difficultySwatchCount);
   answerDisplaySpan.innerHTML = correctAnswerRGB.toUpperCase();
 }
 
