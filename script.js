@@ -51,7 +51,6 @@ function swatchClicked() {
       winGame();
     }
     else {
-      console.log("incorrect!");
       this.style.backgroundColor = BODY_COLOR;
     }
   }
@@ -81,12 +80,10 @@ function generateCorrectAnswer() {
 
 function isSwatchCorrect(chosenSwatch) {
   var swatchColor = chosenSwatch.style.backgroundColor;
-  console.log(swatchColor, correctAnswerRGB);
   return swatchColor === correctAnswerRGB;
 }
 
 function winGame () {
-  console.log("correct!");
   gameOver = true;
   jumbotronBanner.style.backgroundColor = correctAnswerRGB;
   colorAllSwatches(correctAnswerRGB);
