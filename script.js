@@ -80,6 +80,7 @@ function randomizeSwatches(swatchCount) {
   for (var i = 0; i < swatchCount; i++) {
     var swatchColor = getRandomColorString();
     colors[i] = swatchColor;
+    swatches[i].classList.remove("hidden");
     swatches[i].style.backgroundColor = swatchColor;
   }
 }
