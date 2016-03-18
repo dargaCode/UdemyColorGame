@@ -62,7 +62,7 @@ function resetGame() {
   gameOver = false;
   jumbotronBanner.style.backgroundColor = BANNER_COLOR;
   randomizeSwatches();
-  correctAnswerRGB = generateCorrectAnswer();
+  correctAnswerRGB = generateCorrectAnswer(swatchCount);
   answerDisplaySpan.innerHTML = correctAnswerRGB.toUpperCase();
 }
 
@@ -74,8 +74,8 @@ function randomizeSwatches() {
   }
 }
 
-function generateCorrectAnswer() {
-  var stringsLastIndex = colors.length - 1;
+function generateCorrectAnswer(swatchCount) {
+  var stringsLastIndex = swatchCount - 1;
   var answerIndex = getRandomIntWithMax(stringsLastIndex);
   return colors[answerIndex];
 }
