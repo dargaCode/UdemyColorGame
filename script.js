@@ -65,6 +65,7 @@ function swatchClicked() {
 function resetGame() {
   gameOver = false;
   jumbotronBanner.style.backgroundColor = DEFAULT_BANNER_COLOR;
+  hideSwatches();
   randomizeSwatches(difficultySwatchCount);
   correctAnswerRGB = generateCorrectAnswer(difficultySwatchCount);
   answerDisplaySpan.innerHTML = correctAnswerRGB.toUpperCase();
