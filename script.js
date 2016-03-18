@@ -110,6 +110,11 @@ function colorAllSwatches(color) {
   }
 }
 
+function setActiveDifficultyButton(button) {
+  clearActiveDifficultyButtons();
+  button.classList.add("active");
+}
+
 function clearActiveDifficultyButtons() {
   for (var i = 0; i < difficultyButtons.length; i++) {
     difficultyButtons[i].classList.remove("active");
