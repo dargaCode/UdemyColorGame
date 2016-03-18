@@ -2,6 +2,7 @@
 
 var SWATCH_COUNT = 6;
 var BODY_COLOR = "#333333";
+var BANNER_COLOR = "#666666";
 
 // SELECTORS
 
@@ -57,6 +58,7 @@ function swatchClicked() {
 
 function resetGame() {
   gameOver = false;
+  jumbotronBanner.style.backgroundColor = BANNER_COLOR;
   randomizeSwatches();
   correctAnswerRGB = generateCorrectAnswer();
   answerDisplaySpan.innerHTML = correctAnswerRGB.toUpperCase();
