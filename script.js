@@ -24,6 +24,8 @@ var gameOver = false;
 resetButton.addEventListener("click", resetGame);
 easyButton.addEventListener("click", setDifficultyEasy);
 hardButton.addEventListener("click", setDifficultyHard);
+mainBanner.addEventListener("click", resetGame);
+
 
 for (var i = 0; i < swatches.length; i++) {
   swatches[i].addEventListener("click", swatchClicked);
