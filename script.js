@@ -78,7 +78,6 @@ function gameWon () {
   console.log("correct!");
   mainBanner.style.backgroundColor = correctAnswerRGB;
   colorAllSwatches(correctAnswerRGB);
-  alert('winner')
 }
 
 function getRandomColorString() {
