@@ -25,7 +25,7 @@ easyButton.addEventListener("click", setDifficultyEasy);
 hardButton.addEventListener("click", setDifficultyHard);
 
 for (var i = 0; i < swatches.length; i++) {
-  swatches[i].addEventListener("click", swatchGuessed);
+  swatches[i].addEventListener("click", swatchClicked);
 }
 
 function setDifficultyEasy() {
@@ -36,7 +36,7 @@ function setDifficultyHard() {
   alert("Clicked Hard!");
 }
 
-function swatchGuessed() {
+function swatchClicked() {
   if (isSwatchCorrect(this)) {
     gameWon();
   }
