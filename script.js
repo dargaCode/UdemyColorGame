@@ -3,7 +3,7 @@
 var SWATCH_COUNT_EASY = 3;
 var SWATCH_COUNT_HARD = 6;
 var BODY_COLOR = "#333333";
-var BANNER_COLOR = "#666666";
+var DEFAULT_BANNER_COLOR = "#666666";
 
 // SELECTORS
 
@@ -64,7 +64,7 @@ function swatchClicked() {
 
 function resetGame() {
   gameOver = false;
-  jumbotronBanner.style.backgroundColor = BANNER_COLOR;
+  jumbotronBanner.style.backgroundColor = DEFAULT_BANNER_COLOR;
   randomizeSwatches(difficultySwatchCount);
   correctAnswerRGB = generateCorrectAnswer(difficultySwatchCount);
   answerDisplaySpan.innerHTML = correctAnswerRGB.toUpperCase();
