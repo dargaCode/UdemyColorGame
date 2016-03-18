@@ -7,6 +7,6 @@ While working on this, I’ve actually gotten quite a bit better at identifying 
 
 Up next I’ll be moving back into jQuery, but I’m really glad I spent a few projects doing DOM manipulations with vanilla JS first.
 
-<a href="http://dargacode.github.io/UdemyColorMatchGame/"><b>Live Webpage</b</a>
+<a href="http://dargacode.github.io/UdemyColorMatchGame/"><b>Live Webpage</b></a>
 
 <img src ="http://41.media.tumblr.com/9bd945cd4b1d4ccfa744d192d42cf679/tumblr_inline_o48n2heuGC1tvc5hi_1280.png" width=“500" height="500">
