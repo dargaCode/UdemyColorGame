@@ -26,7 +26,6 @@ easyButton.addEventListener("click", setDifficultyEasy);
 hardButton.addEventListener("click", setDifficultyHard);
 jumbotronBanner.addEventListener("click", resetGame);
 
-
 for (var i = 0; i < swatches.length; i++) {
   swatches[i].addEventListener("click", swatchClicked);
 }
