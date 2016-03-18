@@ -69,6 +69,7 @@ function swatchClicked() {
 
 function resetGame() {
   gameOver = false;
+  applyDefaultText();
   jumbotronBanner.style.backgroundColor = DEFAULT_BANNER_COLOR;
   hideSwatches();
   randomizeSwatches(difficultySwatchCount);
