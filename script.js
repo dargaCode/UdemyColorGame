@@ -6,8 +6,8 @@ var DEFAULT_BODY_COLOR = "#333333";
 var DEFAULT_BANNER_COLOR = "#666666";
 var DEFAULT_H1_TEXT = "RGB Color Match Game";
 var WON_H1_TEXT = "You Win!";
-var DEFAULT_RESET_TEXT = "New Colors";
-var WON_RESET_TEXT = "Play Again";
+var DEFAULT_RESET_BUTTON_TEXT = "New Colors";
+var WON_RESET_BUTTON_TEXT = "Play Again";
 
 // SELECTORS
 
@@ -109,12 +109,12 @@ function winGame () {
 }
 
 function applyWinText() {
-  resetButton.innerHTML = WON_RESET_TEXT;
+  resetButton.innerHTML = WON_RESET_BUTTON_TEXT;
   h1.innerHTML = WON_H1_TEXT;
 }
 
 function applyDefaultText() {
-  resetButton.innerHTML = DEFAULT_RESET_TEXT;
+  resetButton.innerHTML = DEFAULT_RESET_BUTTON_TEXT;
   h1.innerHTML = DEFAULT_H1_TEXT;
 }
 
