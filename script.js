@@ -38,12 +38,17 @@ function setDifficultyHard() {
 }
 
 function swatchClicked() {
-  if (isSwatchCorrect(this)) {
-    gameWon();
+  if (gameOver) {
+    resetGame();
   }
   else {
-    console.log("incorrect!");
-    this.style.backgroundColor = BODY_COLOR;
+    if (isSwatchCorrect(this)) {
+      winGame();
+    }
+    else {
+      console.log("incorrect!");
+      this.style.backgroundColor = BODY_COLOR;
+    }
   }
 }
 
