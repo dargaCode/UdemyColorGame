@@ -38,9 +38,7 @@ function setDifficultyHard() {
 
 function swatchGuessed() {
   if (isSwatchCorrect(this)) {
-    console.log("correct!");
-    mainBanner.style.backgroundColor = correctAnswerRGB;
-    colorAllSwatches(correctAnswerRGB);
+    gameWon();
   }
   else {
     console.log("incorrect!");
@@ -74,6 +72,13 @@ function isSwatchCorrect(chosenSwatch) {
   var swatchColor = chosenSwatch.style.backgroundColor;
   console.log(swatchColor, correctAnswerRGB);
   return swatchColor === correctAnswerRGB;
+}
+
+function gameWon () {
+  console.log("correct!");
+  mainBanner.style.backgroundColor = correctAnswerRGB;
+  colorAllSwatches(correctAnswerRGB);
+  alert('winner')
 }
 
 function getRandomColorString() {
