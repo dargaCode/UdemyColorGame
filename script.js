@@ -1,7 +1,7 @@
 // CONSTANTS
 
 var SWATCH_COUNT = 6;
-var BODY_COLOR = "#232323";
+var BODY_COLOR = "#333333";
 
 // SELECTORS
 
