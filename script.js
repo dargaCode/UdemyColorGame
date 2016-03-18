@@ -113,6 +113,11 @@ function applyWinText() {
   h1.innerHTML = WON_H1_TEXT;
 }
 
+function applyDefaultText() {
+  resetButton.innerHTML = DEFAULT_RESET_TEXT;
+  h1.innerHTML = DEFAULT_H1_TEXT;
+}
+
 function getRandomColorString() {
   var red = getRandomIntWithMax(255);
   var green = getRandomIntWithMax(255);
