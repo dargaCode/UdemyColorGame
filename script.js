@@ -4,6 +4,8 @@ var SWATCH_COUNT_EASY = 3;
 var SWATCH_COUNT_HARD = 6;
 var DEFAULT_BODY_COLOR = "#333333";
 var DEFAULT_BANNER_COLOR = "#666666";
+var DEFAULT_H1_TEXT = "RGB Color Match Game";
+var H1_WIN_TEXT = "You Win!";
 
 // SELECTORS
 
