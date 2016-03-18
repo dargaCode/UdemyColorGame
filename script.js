@@ -76,7 +76,7 @@ function isSwatchCorrect(chosenSwatch) {
   return swatchColor === correctAnswerRGB;
 }
 
-function gameWon () {
+function winGame () {
   console.log("correct!");
   gameOver = true;
   mainBanner.style.backgroundColor = correctAnswerRGB;
