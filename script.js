@@ -2,7 +2,7 @@
 
 var SWATCH_COUNT_EASY = 3;
 var SWATCH_COUNT_HARD = 6;
-var BODY_COLOR = "#333333";
+var DEFAULT_BODY_COLOR = "#333333";
 var DEFAULT_BANNER_COLOR = "#666666";
 
 // SELECTORS
@@ -57,7 +57,7 @@ function swatchClicked() {
       winGame();
     }
     else {
-      this.style.backgroundColor = BODY_COLOR;
+      this.style.backgroundColor = DEFAULT_BODY_COLOR;
     }
   }
 }
