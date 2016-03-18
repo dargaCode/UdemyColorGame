@@ -9,6 +9,7 @@ var BANNER_COLOR = "#666666";
 var resetButton = document.querySelector("#reset-btn");
 var easyButton = document.querySelector("#easy-btn");
 var hardButton = document.querySelector("#hard-btn");
+var difficultyButtons = document.querySelectorAll(".header .menu button");
 
 var jumbotronBanner = document.querySelector(".jumbotron .banner");
 var answerDisplaySpan = document.querySelector("#answer-rgb-display");
