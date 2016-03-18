@@ -39,11 +39,13 @@ for (var i = 0; i < swatches.length; i++) {
 function setDifficultyEasy() {
   setActiveDifficultyButton(this);
   swatchCount = SWATCH_COUNT_EASY;
+  resetGame();
 }
 
 function setDifficultyHard() {
   setActiveDifficultyButton(this);
   swatchCount = SWATCH_COUNT_HARD;
+  resetGame();
 }
 
 function swatchClicked() {
