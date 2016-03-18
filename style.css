@@ -19,6 +19,10 @@ body {
   margin: 0 auto;
 }
 
+h2 {
+  margin-top: 20px;
+}
+
 /*COMMON*/
 
 .header .container .row,
