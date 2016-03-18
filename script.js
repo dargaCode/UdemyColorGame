@@ -70,6 +70,12 @@ function resetGame() {
   answerDisplaySpan.innerHTML = correctAnswerRGB.toUpperCase();
 }
 
+function hideSwatches() {
+  for (var i = 0; i < swatches.length; i++) {
+    swatches[i].classList.add("hidden");
+  }
+}
+
 function randomizeSwatches(swatchCount) {
   for (var i = 0; i < swatchCount; i++) {
     var swatchColor = getRandomColorString();
