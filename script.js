@@ -30,7 +30,7 @@ for (var i = 0; i < swatches.length; i++) {
   swatches[i].addEventListener("click", swatchClicked);
 }
 
-// LOGIC
+// FUNCTIONS
 
 function setDifficultyEasy() {
   alert("Clicked Easy!");
