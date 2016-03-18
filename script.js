@@ -18,7 +18,7 @@ var swatches = document.querySelectorAll(".gallery .swatch");
 
 // VARIABLES
 
-var difficultySwatchCount = SWATCH_COUNT_HARD;
+var difficultySwatchCount = SWATCH_COUNT_EASY;
 var colors = Array(difficultySwatchCount);
 var correctAnswerRGB = "";
 var gameOver = false;
