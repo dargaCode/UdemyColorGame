@@ -30,6 +30,8 @@ for (var i = 0; i < swatches.length; i++) {
   swatches[i].addEventListener("click", swatchClicked);
 }
 
+// LOGIC
+
 function setDifficultyEasy() {
   alert("Clicked Easy!");
 }
@@ -52,8 +54,6 @@ function swatchClicked() {
     }
   }
 }
-
-// LOGIC
 
 function resetGame() {
   gameOver = false;
