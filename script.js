@@ -17,6 +17,7 @@ var swatches = document.querySelectorAll(".gallery .swatch");
 
 var colors = Array(SWATCH_COUNT);
 var correctAnswerRGB = "";
+var gameOver = false;
 
 // EVENTS
 
@@ -49,6 +50,7 @@ function swatchClicked() {
 // LOGIC
 
 function resetGame() {
+  gameOver = false;
   randomizeSwatches();
   correctAnswerRGB = generateCorrectAnswer();
   answerDisplaySpan.innerHTML = correctAnswerRGB.toUpperCase();
@@ -76,6 +78,7 @@ function isSwatchCorrect(chosenSwatch) {
 
 function gameWon () {
   console.log("correct!");
+  gameOver = true;
   mainBanner.style.backgroundColor = correctAnswerRGB;
   colorAllSwatches(correctAnswerRGB);
 }
