@@ -104,6 +104,7 @@ function isSwatchCorrect(chosenSwatch) {
 
 function winGame () {
   gameOver = true;
+  applyWinText();
   jumbotronBanner.style.backgroundColor = correctAnswerRGB;
   colorAllSwatches(correctAnswerRGB);
 }
