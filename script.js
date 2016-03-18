@@ -6,6 +6,8 @@ var DEFAULT_BODY_COLOR = "#333333";
 var DEFAULT_BANNER_COLOR = "#666666";
 var DEFAULT_H1_TEXT = "RGB Color Match Game";
 var H1_WIN_TEXT = "You Win!";
+var DEFAULT_RESET_TEXT = "New Colors";
+var RESET_WIN_TEXT = "Play Again";
 
 // SELECTORS
 
