@@ -43,6 +43,7 @@ function setDifficultyEasy() {
 
 function setDifficultyHard() {
   setActiveDifficultyButton(this);
+  swatchCount = SWATCH_COUNT_HARD;
 }
 
 function swatchClicked() {
