@@ -108,6 +108,11 @@ function winGame () {
   colorAllSwatches(correctAnswerRGB);
 }
 
+function applyWinText() {
+  resetButton.innerHTML = RESET_WIN_TEXT;
+  h1.innerHTML = H1_WIN_TEXT;
+}
+
 function getRandomColorString() {
   var red = getRandomIntWithMax(255);
   var green = getRandomIntWithMax(255);
