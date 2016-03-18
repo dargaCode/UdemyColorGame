@@ -65,6 +65,11 @@ body {
   background-color: black;
 }
 
+.header button.active {
+  color: white;
+  background-color: #333333;
+}
+
 /*JUMBOTRON*/
 
 .jumbotron .banner {
