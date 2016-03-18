@@ -61,13 +61,13 @@ function swatchClicked() {
 function resetGame() {
   gameOver = false;
   jumbotronBanner.style.backgroundColor = BANNER_COLOR;
-  randomizeSwatches();
+  randomizeSwatches(swatchCount);
   correctAnswerRGB = generateCorrectAnswer(swatchCount);
   answerDisplaySpan.innerHTML = correctAnswerRGB.toUpperCase();
 }
 
-function randomizeSwatches() {
-  for (var i = 0; i < colors.length; i++) {
+function randomizeSwatches(swatchCount) {
+  for (var i = 0; i < swatchCount; i++) {
     var swatchColor = getRandomColorString();
     colors[i] = swatchColor;
     swatches[i].style.backgroundColor = swatchColor;
