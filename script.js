@@ -38,6 +38,7 @@ for (var i = 0; i < swatches.length; i++) {
 
 function setDifficultyEasy() {
   setActiveDifficultyButton(this);
+  swatchCount = SWATCH_COUNT_EASY;
 }
 
 function setDifficultyHard() {
