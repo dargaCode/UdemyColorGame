@@ -110,6 +110,12 @@ function colorAllSwatches(color) {
   }
 }
 
+function clearActiveDifficultyButtons() {
+  for (var i = 0; i < difficultyButtons.length; i++) {
+    difficultyButtons[i].classList.remove("active");
+  }
+}
+
 // MAIN
 
 resetGame();
