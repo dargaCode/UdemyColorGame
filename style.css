@@ -108,3 +108,7 @@ h2 {
 .gallery .swatch:hover {
   cursor: pointer;
 }
+
+.gallery .swatch.hidden {
+  display: none;
+}
