@@ -35,11 +35,11 @@ for (var i = 0; i < swatches.length; i++) {
 // FUNCTIONS
 
 function setDifficultyEasy() {
-  alert("Clicked Easy!");
+  setActiveDifficultyButton(this);
 }
 
 function setDifficultyHard() {
-  alert("Clicked Hard!");
+  setActiveDifficultyButton(this);
 }
 
 function swatchClicked() {
