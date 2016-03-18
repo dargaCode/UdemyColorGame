@@ -9,7 +9,7 @@ var resetButton = document.querySelector("#reset-btn");
 var easyButton = document.querySelector("#easy-btn");
 var hardButton = document.querySelector("#hard-btn");
 
-var mainBanner = document.querySelector(".jumbotron .banner");
+var jumbotronBanner = document.querySelector(".jumbotron .banner");
 var answerDisplaySpan = document.querySelector("#answer-rgb-display");
 var swatches = document.querySelectorAll(".gallery .swatch");
 
@@ -24,7 +24,7 @@ var gameOver = false;
 resetButton.addEventListener("click", resetGame);
 easyButton.addEventListener("click", setDifficultyEasy);
 hardButton.addEventListener("click", setDifficultyHard);
-mainBanner.addEventListener("click", resetGame);
+jumbotronBanner.addEventListener("click", resetGame);
 
 
 for (var i = 0; i < swatches.length; i++) {
@@ -86,7 +86,7 @@ function isSwatchCorrect(chosenSwatch) {
 function winGame () {
   console.log("correct!");
   gameOver = true;
-  mainBanner.style.backgroundColor = correctAnswerRGB;
+  jumbotronBanner.style.backgroundColor = correctAnswerRGB;
   colorAllSwatches(correctAnswerRGB);
 }
 
