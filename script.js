@@ -41,8 +41,6 @@ function createEvents() {
   }
 }
 
-// FUNCTIONS
-
 function easyButtonClicked() {
   setActiveDifficultyButton(this);
   difficultySwatchCount = SWATCH_COUNT_EASY;
@@ -68,6 +66,8 @@ function swatchClicked() {
     }
   }
 }
+
+// FUNCTIONS
 
 function resetGame() {
   gameOver = false;
