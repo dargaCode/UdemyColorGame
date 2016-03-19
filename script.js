@@ -30,13 +30,15 @@ var gameOver = false;
 
 // EVENTS
 
-resetButton.addEventListener("click", resetGame);
-easyButton.addEventListener("click", setDifficultyEasy);
-hardButton.addEventListener("click", setDifficultyHard);
-jumbotronBanner.addEventListener("click", resetGame);
+function createEvents() {
+  resetButton.addEventListener("click", resetGame);
+  easyButton.addEventListener("click", setDifficultyEasy);
+  hardButton.addEventListener("click", setDifficultyHard);
+  jumbotronBanner.addEventListener("click", resetGame);
 
-for (var i = 0; i < swatches.length; i++) {
-  swatches[i].addEventListener("click", swatchClicked);
+  for (var i = 0; i < swatches.length; i++) {
+    swatches[i].addEventListener("click", swatchClicked);
+  }
 }
 
 // FUNCTIONS
@@ -151,4 +153,5 @@ function clearActiveDifficultyButtons() {
 
 // MAIN
 
+createEvents();
 resetGame();
