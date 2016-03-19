@@ -32,8 +32,8 @@ var gameOver = false;
 
 function createEvents() {
   resetButton.addEventListener("click", resetGame);
-  easyButton.addEventListener("click", setDifficultyEasy);
-  hardButton.addEventListener("click", setDifficultyHard);
+  easyButton.addEventListener("click", easyButtonClicked);
+  hardButton.addEventListener("click", hardButtonClicked);
   jumbotronBanner.addEventListener("click", resetGame);
 
   for (var i = 0; i < swatches.length; i++) {
@@ -43,13 +43,13 @@ function createEvents() {
 
 // FUNCTIONS
 
-function setDifficultyEasy() {
+function easyButtonClicked() {
   setActiveDifficultyButton(this);
   difficultySwatchCount = SWATCH_COUNT_EASY;
   resetGame();
 }
 
-function setDifficultyHard() {
+function hardButtonClicked() {
   setActiveDifficultyButton(this);
   difficultySwatchCount = SWATCH_COUNT_HARD;
   resetGame()
