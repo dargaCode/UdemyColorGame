@@ -86,6 +86,10 @@ function setGameDifficulty(difficulty) {
   resetGame();
 };
 
+function saveGameSettings() {
+  localStorage.setItem("difficulty", game.difficulty);
+}
+
 function resetGame() {
   game.over = false;
   applyDefaultText();
