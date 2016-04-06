@@ -29,8 +29,9 @@ var swatches = document.querySelectorAll(".gallery .swatch");
 // VARIABLES
 
 var game = {
-  swatchCount: DIFFICULTIES[DEFAULT_DIFFICULTY].swatchCount,
-  colors: Array(this.swatchCount),
+  difficulty: "",
+  swatchCount: 0,
+  colors: [],
   correctAnswerRGB: "",
   over: false
 }
@@ -88,7 +89,9 @@ function resetGame() {
 }
 
 function setGameDifficulty(difficulty) {
-  game.swatchCount = DIFFICULTIES[difficulty].swatchCount;
+  game.difficulty = difficulty;
+  game.swatchCount = DIFFICULTIES[game.difficulty].swatchCount;
+  game.colors = Array(game.swatchCount);
   resetGame();
 };
 
@@ -167,4 +170,4 @@ function clearActiveDifficultyButtons() {
 // MAIN
 
 createEvents();
-resetGame();
+setGameDifficulty(DEFAULT_DIFFICULTY);
