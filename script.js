@@ -26,10 +26,12 @@ var swatches = document.querySelectorAll(".gallery .swatch");
 
 // VARIABLES
 
-var gameSwatchCount = DIFFICULTIES[DEFAULT_DIFFICULTY].swatchCount;
-var colors = Array(gameSwatchCount);
-var correctAnswerRGB = "";
-var gameOver = false;
+var game = {
+  swatchCount: DIFFICULTIES[DEFAULT_DIFFICULTY].swatchCount,
+  colors: Array(this.swatchCount),
+  correctAnswerRGB: "",
+  over: false
+}
 
 // EVENTS
 
@@ -46,18 +48,18 @@ function createEvents() {
 
 function easyButtonClicked() {
   setActiveDifficultyButton(this);
-  gameSwatchCount = DIFFICULTIES.easy.swatchCount;
+  game.swatchCount = DIFFICULTIES.easy.swatchCount;
   resetGame();
 }
 
 function hardButtonClicked() {
   setActiveDifficultyButton(this);
-  gameSwatchCount = DIFFICULTIES.hard.swatchCount;
+  game.swatchCount = DIFFICULTIES.hard.swatchCount;
   resetGame()
 }
 
 function swatchClicked() {
-  if (gameOver) {
+  if (game.over) {
     resetGame();
   }
   else {
@@ -73,13 +75,13 @@ function swatchClicked() {
 // FUNCTIONS
 
 function resetGame() {
-  gameOver = false;
+  game.over = false;
   applyDefaultText();
   jumbotronBanner.style.backgroundColor = DEFAULT_BANNER_COLOR;
   hideSwatches();
-  randomizeSwatches(gameSwatchCount);
-  correctAnswerRGB = generateCorrectAnswer(gameSwatchCount);
-  answerDisplaySpan.innerHTML = correctAnswerRGB.toUpperCase();
+  randomizeSwatches(game.swatchCount);
+  game.correctAnswerRGB = generateCorrectAnswer(game.swatchCount);
+  answerDisplaySpan.innerHTML = game.correctAnswerRGB.toUpperCase();
 }
 
 function hideSwatches() {
@@ -91,7 +93,7 @@ function hideSwatches() {
 function randomizeSwatches(swatchCount) {
   for (var i = 0; i < swatchCount; i++) {
     var swatchColor = getRandomColorString();
-    colors[i] = swatchColor;
+    game.colors[i] = swatchColor;
     swatches[i].classList.remove("hidden");
     swatches[i].style.backgroundColor = swatchColor;
   }
@@ -100,19 +102,19 @@ function randomizeSwatches(swatchCount) {
 function generateCorrectAnswer(swatchCount) {
   var stringsLastIndex = swatchCount - 1;
   var answerIndex = getRandomIntWithMax(stringsLastIndex);
-  return colors[answerIndex];
+  return game.colors[answerIndex];
 }
 
 function isSwatchCorrect(chosenSwatch) {
   var swatchColor = chosenSwatch.style.backgroundColor;
-  return swatchColor === correctAnswerRGB;
+  return swatchColor === game.correctAnswerRGB;
 }
 
 function winGame () {
-  gameOver = true;
+  game.over = true;
   applyWinText();
-  jumbotronBanner.style.backgroundColor = correctAnswerRGB;
-  colorAllSwatches(correctAnswerRGB);
+  jumbotronBanner.style.backgroundColor = game.correctAnswerRGB;
+  colorAllSwatches(game.correctAnswerRGB);
 }
 
 function applyWinText() {
