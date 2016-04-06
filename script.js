@@ -18,6 +18,7 @@ var WON_RESET_BUTTON_TEXT = "Play Again?";
 var resetButton = document.querySelector("#reset-btn");
 var easyButton = document.querySelector("#easy-btn");
 var hardButton = document.querySelector("#hard-btn");
+var expertButton = document.querySelector("#expert-btn");
 var difficultyButtons = document.querySelectorAll(".header .menu button");
 
 var h1 = document.querySelector("h1");
@@ -40,6 +41,7 @@ function createEvents() {
   resetButton.addEventListener("click", resetGame);
   easyButton.addEventListener("click", easyButtonClicked);
   hardButton.addEventListener("click", hardButtonClicked);
+  expertButton.addEventListener("click", expertButtonClicked);
   jumbotronBanner.addEventListener("click", resetGame);
 
   for (var i = 0; i < swatches.length; i++) {
