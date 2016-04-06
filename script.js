@@ -39,32 +39,26 @@ var game = {
 
 function createEvents() {
   resetButton.addEventListener("click", resetGame);
-  easyButton.addEventListener("click", easyButtonClicked);
-  hardButton.addEventListener("click", hardButtonClicked);
-  expertButton.addEventListener("click", expertButtonClicked);
   jumbotronBanner.addEventListener("click", resetGame);
+
+  easyButton.addEventListener("click", function() {
+    setActiveDifficultyButton(this);
+    setGameDifficulty("easy");
+  });
+
+  hardButton.addEventListener("click", function() {
+    setActiveDifficultyButton(this);
+    setGameDifficulty("hard");
+  });
+
+  expertButton.addEventListener("click", function() {
+    setActiveDifficultyButton(this);
+    setGameDifficulty("expert");
+  });
 
   for (var i = 0; i < swatches.length; i++) {
     swatches[i].addEventListener("click", swatchClicked);
   }
-}
-
-function easyButtonClicked() {
-  setActiveDifficultyButton(this);
-  setGameDifficulty("easy");
-  resetGame();
-}
-
-function hardButtonClicked() {
-  setActiveDifficultyButton(this);
-  setGameDifficulty("hard");
-  resetGame();
-}
-
-function expertButtonClicked() {
-  setActiveDifficultyButton(this);
-  setGameDifficulty("expert");
-  resetGame();
 }
 
 function swatchClicked() {
@@ -83,10 +77,6 @@ function swatchClicked() {
 
 // FUNCTIONS
 
-function setGameDifficulty(difficulty) {
-  game.swatchCount = DIFFICULTIES[difficulty].swatchCount;
-};
-
 function resetGame() {
   game.over = false;
   applyDefaultText();
@@ -96,6 +86,11 @@ function resetGame() {
   game.correctAnswerRGB = generateCorrectAnswer(game.swatchCount);
   answerDisplaySpan.innerHTML = game.correctAnswerRGB.toUpperCase();
 }
+
+function setGameDifficulty(difficulty) {
+  game.swatchCount = DIFFICULTIES[difficulty].swatchCount;
+  resetGame();
+};
 
 function hideSwatches() {
   for (var i = 0; i < swatches.length; i++) {
