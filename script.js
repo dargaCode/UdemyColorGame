@@ -2,7 +2,8 @@
 
 var DIFFICULTIES = {
   easy: {swatchCount: 3},
-  hard: {swatchCount: 6}
+  hard: {swatchCount: 6},
+  expert: {swatchCount: 9}
 };
 var DEFAULT_DIFFICULTY = "easy";
 var DEFAULT_BODY_COLOR = "#333333";
@@ -55,7 +56,13 @@ function easyButtonClicked() {
 function hardButtonClicked() {
   setActiveDifficultyButton(this);
   setGameDifficulty("hard");
-  resetGame()
+  resetGame();
+}
+
+function expertButtonClicked() {
+  setActiveDifficultyButton(this);
+  setGameDifficulty("expert");
+  resetGame();
 }
 
 function swatchClicked() {
