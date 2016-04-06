@@ -14,10 +14,20 @@ var swatches = document.querySelectorAll(".gallery .swatch");
 // CONSTANTS
 
 var DIFFICULTIES = {
-  easy: {swatchCount: 3},
-  hard: {swatchCount: 6},
-  expert: {swatchCount: 9}
+  easy: {
+    swatchCount: 3,
+    button: easyButton
+  },
+  hard: {
+    swatchCount: 6,
+    button: hardButton
+  },
+  expert: {
+    swatchCount: 9,
+    button: expertButton
+  }
 };
+
 var DEFAULT_DIFFICULTY = "easy";
 var DEFAULT_BODY_COLOR = "#333333";
 var DEFAULT_BANNER_COLOR = "#666666";
