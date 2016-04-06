@@ -48,13 +48,13 @@ function createEvents() {
 
 function easyButtonClicked() {
   setActiveDifficultyButton(this);
-  game.swatchCount = DIFFICULTIES.easy.swatchCount;
+  setGameDifficulty("easy");
   resetGame();
 }
 
 function hardButtonClicked() {
   setActiveDifficultyButton(this);
-  game.swatchCount = DIFFICULTIES.hard.swatchCount;
+  setGameDifficulty("hard");
   resetGame()
 }
 
@@ -73,6 +73,10 @@ function swatchClicked() {
 }
 
 // FUNCTIONS
+
+function setGameDifficulty(difficulty) {
+  game.swatchCount = DIFFICULTIES[difficulty].swatchCount;
+};
 
 function resetGame() {
   game.over = false;
