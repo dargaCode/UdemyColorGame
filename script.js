@@ -78,6 +78,14 @@ function swatchClicked() {
 
 // FUNCTIONS
 
+function setGameDifficulty(difficulty) {
+  game.difficulty = difficulty;
+  game.swatchCount = DIFFICULTIES[game.difficulty].swatchCount;
+  game.colors = Array(game.swatchCount);
+  saveGameSettings();
+  resetGame();
+};
+
 function resetGame() {
   game.over = false;
   applyDefaultText();
@@ -87,13 +95,6 @@ function resetGame() {
   game.correctAnswerRGB = generateCorrectAnswer(game.swatchCount);
   answerDisplaySpan.innerHTML = game.correctAnswerRGB.toUpperCase();
 }
-
-function setGameDifficulty(difficulty) {
-  game.difficulty = difficulty;
-  game.swatchCount = DIFFICULTIES[game.difficulty].swatchCount;
-  game.colors = Array(game.swatchCount);
-  resetGame();
-};
 
 function hideSwatches() {
   for (var i = 0; i < swatches.length; i++) {
