@@ -90,6 +90,15 @@ function saveGameSettings() {
   localStorage.setItem("difficulty", game.difficulty);
 }
 
+function loadSavedDifficulty() {
+    if (localStorage.length === 0) {
+    setGameDifficulty(DEFAULT_DIFFICULTY);
+  } else {
+    var savedDifficulty = localStorage.getItem("difficulty");
+    setGameDifficulty(savedDifficulty);
+  }
+}
+
 function resetGame() {
   game.over = false;
   applyDefaultText();
@@ -175,10 +184,4 @@ function clearActiveDifficultyButtons() {
 // MAIN
 
 createEvents();
-
-if (localStorage.length === 0) {
-  setGameDifficulty(DEFAULT_DIFFICULTY);
-} else {
-  var savedDifficulty = localStorage.getItem("difficulty");
-  setGameDifficulty(savedDifficulty);
-}
+loadSavedDifficulty();
