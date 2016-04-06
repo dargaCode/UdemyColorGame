@@ -1,7 +1,10 @@
 // CONSTANTS
 
-var SWATCH_COUNT_EASY = 3;
-var SWATCH_COUNT_HARD = 6;
+var DIFFICULTIES = {
+  easy: {swatchCount: 3},
+  hard: {swatchCount: 6}
+};
+var DEFAULT_DIFFICULTY = "easy";
 var DEFAULT_BODY_COLOR = "#333333";
 var DEFAULT_BANNER_COLOR = "#666666";
 var DEFAULT_H1_TEXT = "RGB Color Match Game";
@@ -23,8 +26,8 @@ var swatches = document.querySelectorAll(".gallery .swatch");
 
 // VARIABLES
 
-var difficultySwatchCount = SWATCH_COUNT_EASY;
-var colors = Array(difficultySwatchCount);
+var gameSwatchCount = DIFFICULTIES[DEFAULT_DIFFICULTY].swatchCount;
+var colors = Array(gameSwatchCount);
 var correctAnswerRGB = "";
 var gameOver = false;
 
@@ -43,13 +46,13 @@ function createEvents() {
 
 function easyButtonClicked() {
   setActiveDifficultyButton(this);
-  difficultySwatchCount = SWATCH_COUNT_EASY;
+  gameSwatchCount = DIFFICULTIES.easy.swatchCount;
   resetGame();
 }
 
 function hardButtonClicked() {
   setActiveDifficultyButton(this);
-  difficultySwatchCount = SWATCH_COUNT_HARD;
+  gameSwatchCount = DIFFICULTIES.hard.swatchCount;
   resetGame()
 }
 
@@ -74,8 +77,8 @@ function resetGame() {
   applyDefaultText();
   jumbotronBanner.style.backgroundColor = DEFAULT_BANNER_COLOR;
   hideSwatches();
-  randomizeSwatches(difficultySwatchCount);
-  correctAnswerRGB = generateCorrectAnswer(difficultySwatchCount);
+  randomizeSwatches(gameSwatchCount);
+  correctAnswerRGB = generateCorrectAnswer(gameSwatchCount);
   answerDisplaySpan.innerHTML = correctAnswerRGB.toUpperCase();
 }
 
