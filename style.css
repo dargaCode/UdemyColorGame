@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  max-width: 550px;
+  max-width: 540px;
   margin: 0 auto;
 }
 
@@ -64,7 +64,7 @@ h2 {
   letter-spacing: 0.4px;
   font-weight: 500;
   background-color: #e1e1e1;
-  height: 50px;
+  height: 40px;
   outline: none;
   border: none;
   padding: 0 18px;
@@ -84,7 +84,7 @@ h2 {
 /*JUMBOTRON*/
 
 .jumbotron .banner {
-  min-height: calc(550px * 0.3);
+  min-height: calc(540px * 0.3);
   background-color: #666666;
   margin-top: 3.33%; /*Same top margin as swatches*/
   padding: 5% 20px;
@@ -93,7 +93,7 @@ h2 {
 /*GALLERY*/
 
 .gallery {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-size: 0; /* no space between inline-block elements*/
 }
 
