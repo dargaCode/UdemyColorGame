@@ -82,11 +82,11 @@ function setGameDifficulty(difficulty) {
   game.difficulty = difficulty;
   game.swatchCount = DIFFICULTIES[game.difficulty].swatchCount;
   game.colors = Array(game.swatchCount);
-  saveGameSettings();
+  saveDifficulty();
   resetGame();
 };
 
-function saveGameSettings() {
+function saveDifficulty() {
   localStorage.setItem("difficulty", game.difficulty);
 }
 
