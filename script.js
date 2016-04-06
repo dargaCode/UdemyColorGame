@@ -53,17 +53,14 @@ function createEvents() {
   jumbotronBanner.addEventListener("click", resetGame);
 
   easyButton.addEventListener("click", function() {
-    setActiveDifficultyButton(this);
     setGameDifficulty("easy");
   });
 
   hardButton.addEventListener("click", function() {
-    setActiveDifficultyButton(this);
     setGameDifficulty("hard");
   });
 
   expertButton.addEventListener("click", function() {
-    setActiveDifficultyButton(this);
     setGameDifficulty("expert");
   });
 
@@ -89,10 +86,14 @@ function swatchClicked() {
 // FUNCTIONS
 
 function setGameDifficulty(difficulty) {
+  var difficultyConstant = DIFFICULTIES[difficulty];
+
   game.difficulty = difficulty;
-  game.swatchCount = DIFFICULTIES[game.difficulty].swatchCount;
+  game.swatchCount = difficultyConstant.swatchCount;
   game.colors = Array(game.swatchCount);
+
   saveDifficulty();
+  setActiveDifficultyButton(difficultyConstant.button);
   resetGame();
 };
 
