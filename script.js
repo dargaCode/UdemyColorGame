@@ -1,3 +1,16 @@
+// SELECTORS
+
+var resetButton = document.querySelector("#reset-btn");
+var easyButton = document.querySelector("#easy-btn");
+var hardButton = document.querySelector("#hard-btn");
+var expertButton = document.querySelector("#expert-btn");
+var difficultyButtons = document.querySelectorAll(".header .menu button");
+
+var h1 = document.querySelector("h1");
+var jumbotronBanner = document.querySelector(".jumbotron .banner");
+var answerDisplaySpan = document.querySelector("#answer-rgb-display");
+var swatches = document.querySelectorAll(".gallery .swatch");
+
 // CONSTANTS
 
 var DIFFICULTIES = {
@@ -12,19 +25,6 @@ var DEFAULT_H1_TEXT = "RGB Color Match Game";
 var WON_H1_TEXT = "You Win!";
 var DEFAULT_RESET_BUTTON_TEXT = "New Colors";
 var WON_RESET_BUTTON_TEXT = "Play Again?";
-
-// SELECTORS
-
-var resetButton = document.querySelector("#reset-btn");
-var easyButton = document.querySelector("#easy-btn");
-var hardButton = document.querySelector("#hard-btn");
-var expertButton = document.querySelector("#expert-btn");
-var difficultyButtons = document.querySelectorAll(".header .menu button");
-
-var h1 = document.querySelector("h1");
-var jumbotronBanner = document.querySelector(".jumbotron .banner");
-var answerDisplaySpan = document.querySelector("#answer-rgb-display");
-var swatches = document.querySelectorAll(".gallery .swatch");
 
 // VARIABLES
 
