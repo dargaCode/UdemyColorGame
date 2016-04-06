@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -67,7 +67,7 @@ h2 {
   height: 50px;
   outline: none;
   border: none;
-  padding: 0 20px;
+  padding: 0 18px;
 }
 
 .header button:hover {
@@ -84,7 +84,7 @@ h2 {
 /*JUMBOTRON*/
 
 .jumbotron .banner {
-  min-height: calc(600px * 0.3);
+  min-height: calc(550px * 0.3);
   background-color: #666666;
   margin-top: 3.33%; /*Same top margin as swatches*/
   padding: 5% 20px;
@@ -93,7 +93,7 @@ h2 {
 /*GALLERY*/
 
 .gallery {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   font-size: 0; /* no space between inline-block elements*/
 }
 
