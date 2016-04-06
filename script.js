@@ -175,4 +175,10 @@ function clearActiveDifficultyButtons() {
 // MAIN
 
 createEvents();
-setGameDifficulty(DEFAULT_DIFFICULTY);
+
+if (localStorage.length === 0) {
+  setGameDifficulty(DEFAULT_DIFFICULTY);
+} else {
+  var savedDifficulty = localStorage.getItem("difficulty");
+  setGameDifficulty(savedDifficulty);
+}
