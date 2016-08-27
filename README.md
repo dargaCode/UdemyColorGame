@@ -15,4 +15,4 @@ This required a decent amount of refactoring. While I was at it, I added an Expe
 
 <a href="http://dargacode.github.io/UdemyColorMatchGame/"><b>Live Webpage</b></a>
 
-<img src ="http://41.media.tumblr.com/b884a69befd2604f2893d2466a81bf1a/tumblr_inline_o58oc1MXIp1tvc5hi_1280.png" width=“550" height="550">
+<img src ="http://41.media.tumblr.com/b884a69befd2604f2893d2466a81bf1a/tumblr_inline_o58oc1MXIp1tvc5hi_1280.png" width="550">
